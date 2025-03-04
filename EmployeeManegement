@@ -1,0 +1,45 @@
+package Apr;
+
+import java.util.ArrayList;
+import java.util.List;
+
+class EmployeeD { 
+    private int id;
+    private String name;
+    private double salary;
+
+    public EmployeeD(int id, String name, double salary) {
+        this.id = id;
+        this.name = name;
+        this.salary = salary;
+    }
+
+    public int getId() {
+        return id;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public double getSalary() {
+        return salary;
+    }
+
+    public void displayDetails() {
+        System.out.println("ID: " + id + ", Name: " + name + ", Salary: $" + salary);
+    }
+}
+
+public class EmployeeManegement {  
+    public static void main(String[] args) {
+        List<EmployeeD> employees = new ArrayList<>();  
+        employees.add(new EmployeeD(101, "Adnan", 50000));
+        employees.add(new EmployeeD(102, "Basit", 60000));
+        employees.add(new EmployeeD(103, "Shreyas", 55000));
+
+        for (EmployeeD emp : employees) {
+            emp.displayDetails();
+        }
+    }
+}
